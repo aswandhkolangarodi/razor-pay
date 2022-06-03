@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<div class="col-6 mx-auto">
+    <div class="text-center">
+        <img src="https://img.freepik.com/free-vector/coffee-love-foam-with-beans-cartoon-icon-illustration_138676-2575.jpg?w=2000" class="img-fluid mt-5" style="height:200px">
+    </div>
+    <form method = "post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter Name</label>
+          <input type="name" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Enter Amound</label>
+          <input type="number" name="amount" class="form-control" id="exampleInputPassword1">
+        </div>
+        {% comment %} <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </form>
+</div>
+
+{% endblock %}
